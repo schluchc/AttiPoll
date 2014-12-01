@@ -1,0 +1,7 @@
+#!/bin/bash
+# schlc - 11.01.2014
+# christian.schluchter@gmail.com
+
+# run google app engine on localhost, hosting current directory
+dev_appserver.py --port 8080 .
+ 

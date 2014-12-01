@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+
+    <title>{{p.title}}</title>
+  </head>
+
+  <body>
+    {{p.created.strftime("%b %d, %Y")}}
+    <a href={{p.name | safe}}>{{p.name | safe}}</a>
+    {{p.content | safe}}  <!--renders string in _render_content (posted content) unescaped, can be dangerous if source unknown!-->
+
+    <a href="/_guess/{{p.name}}">Guess</a>
+
+    <div id="content">
+      {% for g in guesses %}
+        {{ g.render() | safe }} <!-- safe is used to specify that it does not have not be unescaped -->
+        <br><br>
+      {% endfor %}
+    </div>
+  </body>
+</html>

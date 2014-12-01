@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/static/main.css"/>
+
+		<title>Guess Poll</title>
+	</head>
+
+	<body>
+		{{p.created.strftime("%b %d, %Y")}}
+		<a href={{p.name | safe}}>{{p.name | safe}}</a>
+		{{p.content | safe}}  <!--renders string in _render_content (posted content) unescaped, can be dangerous if source unknown!-->
+
+		<form method="post">
+			<table>
+				<tr>
+					<td class="label">
+						% Ja-Anteil
+					</td>
+					<td>
+						<input type="text" name="guess" value={{guess}}>
+					</td>
+				</tr>
+			</table>
+			<input type="submit">
+		</form>
+	</body>
+</html>

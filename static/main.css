@@ -1,0 +1,14 @@
+/* remember viewport units (especially important for mobile, but also works on desktop)
+1vw is 1% of the viewport width
+1vh is 1% of the viewport height
+1vmin is equal to 1vh or 1vw, whichever is smallest
+1vmax is equal to 1vh or 1vw, whichever is largest
+*/
+
+body {
+
+}
+
+.error {
+  color: red;
+}

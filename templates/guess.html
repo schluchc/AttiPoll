@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+  </head>
+
+  <body>
+    {{g.created.strftime("%b %d, %Y")}}
+    {{g.guess | safe}}% by  <!--renders string in _render_content (posted content) unescaped, can be dangerous if source unknown!-->
+    {{g.username | safe}}
+  </body>
+</html>

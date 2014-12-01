@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %} <!-- replace block content in base.html with this one-->
+
+  {% for p in polls %}
+    {{ p.render() | safe }} <!-- safe is used to specify that it does not have not be unescaped -->
+    <br><br>
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,5 @@
+#!/bin/bash
+# schlc - 11.01.2014
+# upload current directory to my google app engine appspot
+
+appcfg.py update --oauth2 -A erbslifresser .

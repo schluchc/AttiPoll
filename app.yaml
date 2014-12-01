@@ -1,0 +1,26 @@
+# Attitude Poller
+# schluchc - 2014-12-01
+# christian.schluchter@gmail.com
+
+application: erbslifresser
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+# google's webapp
+- name: webapp2
+  version: latest
+
+# needed for templates
+- name: jinja2
+  version: latest
+
+handlers:
+- url: /static
+  static_dir: static
+
+# main is the python file that is executed, application is the name of the application
+- url: /.*
+  script: main.application
